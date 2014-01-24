@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-Jan-2014, 13:52:31
+    Author     : Csaba_Valyi
+*/
+@import 'base';
+
+.font{
+  font-size: 100%;
+}
+
+#font:hover {
+  @extend .font;
+  font-size: 550%;
+  @include transition-duration(0.8s);
+  @include transition-timing-function(ease-in);
+}
+
