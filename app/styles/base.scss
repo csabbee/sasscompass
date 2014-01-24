@@ -1,0 +1,57 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+@mixin transition-example($width){
+  width: $width;
+}
+
+.transition-example {
+  width: 145px;
+}
+
+#box-shadow-custom {
+  @include box-shadow(red 2px 2px 10px);
+}
+
+#box-shadow-custom-multiple {
+  @include box-shadow(rgba(blue, 0.4) 0 0 35px, rgba(green, 0.2) 0 0 3px 1px inset);
+}
+
+#width {
+  @include transition-property(width);
+}
+ 
+#width:hover {
+  width: 180px;
+}
+ 
+#width-duration {
+  @include transition-example(80px);
+  @include transition-property(width);
+  @include transition-duration(2s);
+}
+ 
+#width-duration:hover {
+  width: 180px;
+}
+ 
+#width-duration-easein {
+  @include transition-property(width);
+  @include transition-duration(2s);
+  @include transition-timing-function(ease-in);
+}
+ 
+#width-duration-easein:hover {
+  width: 180px;
+}
+ 
+#width-delay {
+  @include transition-property(width);
+  @include transition-delay(2s);
+}
+ 
+#width-delay:hover {
+  width: 180px;
+}
+
