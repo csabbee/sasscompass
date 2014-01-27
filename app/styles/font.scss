@@ -9,14 +9,17 @@ and open the template in the editor.
 */
 @import 'base';
 
-.font{
-  font-size: 100%;
+@mixin link_font($font_size){
+  font-size: $font_size;
 }
 
-#font:hover {
-  @extend .font;
-  font-size: 550%;
-  @include transition-duration(0.8s);
+.font:hover {
+  @include link_font(175%);
+  @include transition-property(font);
+  @include transition-duration(0.2s);
   @include transition-timing-function(ease-in);
 }
 
+.link_color:hover {
+  background-color:#EEEEEE;
+}
