@@ -91,6 +91,28 @@ body {
     }
 }
 
+@mixin fancy-box-shadow($color:rgba(0,0,0,0.5), $left_shadow:-4deg, $right_shadow:4deg, $bottom:12px){
+  position: relative;
+  background: #fff;
+  
+  &:before, &:after{
+    position: absolute;
+    width: 48%;
+    max-width: 50%;
+    top: 80%;
+    left: 10px;
+    bottom: $bottom;
+    content: '';
+    z-index: -1;
+    @include single-box-shadow($color, 0, 15px, 15px);
+    @include rotate($left_shadow);
+  }
+  &:after{
+    right: 10px;
+    left:auto;
+    @include rotate($right_shadow);
+  }
+} 
 
 .videowrapper {
     float: none;
@@ -100,6 +122,7 @@ body {
     padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
+    @include fancy-box-shadow();
     iframe {
       position: absolute;
       top: 0;
@@ -108,3 +131,5 @@ body {
       height: 100%;
     }
 }
+
+

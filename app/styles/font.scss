@@ -13,11 +13,15 @@ and open the template in the editor.
   font-size: $font_size;
 }
 
+.font{
+  font-size: 14px;
+}
+
 .font:hover {
-  @include link_font(175%);
+  @include link_font(20px);
   @include transition-property(font);
   @include transition-duration(0.2s);
-  @include transition-timing-function(ease-in);
+  //@include transition-timing-function(ease-in);
 }
 
 .link_color:hover {
