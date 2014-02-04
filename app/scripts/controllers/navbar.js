@@ -3,6 +3,21 @@
 angular.module('sasscompassApp')
   .controller('NavbarCtrl', function ($scope) {
     $scope.links = [
-      'link1', 'link2', 'link3', 'link4'
+      {
+        name: 'link1',
+        link: '#/firstview'
+      },
+      {
+        name: 'link2',
+        link: '#/secondview'
+      },
+      {
+        name: 'link3',
+        link: ''
+      },
+      {
+        name: 'link4',
+        link: ''
+      }
     ];
   });

@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('sasscompassApp', [
-  'ngRoute'
+  'ngRoute',
+  'ngAnimate'
 ])
   .config(function($routeProvider){
     $routeProvider

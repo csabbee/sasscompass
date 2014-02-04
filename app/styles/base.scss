@@ -1,9 +1,12 @@
-@import "compass/reset";
 @import "compass/css3";
 @import "compass/utilities";
 
 @mixin transition-example($width){
   width: $width;
+}
+
+@mixin background-image($image){
+  background-image: url($image);
 }
 
 .transition-example {
@@ -28,7 +31,7 @@
  
 #width-duration {
   @include transition-example(80px);
-  @include transition-property(width);
+  //@include transition-property(width);
   @include transition-duration(2s);
 }
  

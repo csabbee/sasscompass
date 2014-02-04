@@ -14,6 +14,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 0px;
     padding-bottom: 20px;
+    background-image: url("Hopetoun_falls.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -132,4 +135,29 @@ body {
     }
 }
 
+.slide-animate.ng-enter, .slide-animate.ng-leave{
+ -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+      transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+ }
+
+
+.slide-animate.ng-enter.ng-enter-active {
+ position: absolute;
+ left: 2300px;
+}
+
+.slide-animate.ng-enter {
+ left: 0;
+}
+
+.slide-animate.ng-leave.ng-leave-active {
+ position: absolute;
+ left: -2700px;
+ }
+
+.slide-animate.ng-leave {
+ right: 0;
+ }
 
