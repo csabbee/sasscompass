@@ -14,9 +14,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 0px;
     padding-bottom: 20px;
-    background-image: url("Hopetoun_falls.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -94,6 +91,12 @@ body {
     }
 }
 
+.backgrnd-image{
+  @include background-image('Hopetoun_falls.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @mixin fancy-box-shadow($color:rgba(0,0,0,0.5), $left_shadow:-4deg, $right_shadow:4deg, $bottom:12px){
   position: relative;
   background: #fff;
@@ -136,28 +139,25 @@ body {
 }
 
 .slide-animate.ng-enter, 
-.slide-animate.ng-leave,
-.slide-animate.ng-move{
- -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+.slide-animate.ng-leave{
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
-   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
-      transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
  }
 
  .slide-animate.ng-enter {
-   position: absolute;
-   right: 2000px;
+   transform: translateX(-2000px);
  }
  
  .slide-animate.ng-enter.ng-enter-active {
-   right: 0px;
+   transform: translateX(0);
  }
  
  .slide-animate.ng-leave {
    position: absolute;
-   left: 0px;
  }
  
  .slide-animate.ng-leave.ng-leave-active {
-   left: -2000px;
+   transform: translateX(-2000px);
  }
